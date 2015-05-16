@@ -15,7 +15,7 @@ stardict:
 	eval dictunzip $(dicts)/*.dz
 
 tars:
-	bash ../bin/make_tarballs.sh https://github.com/vvasuki/stardict-sanskrit/raw/master/en-head
+	bash ../bin/make_tarballs.sh https://github.com/vvasuki/stardict-pali/raw/master/en-head
 	
 dunzip:
 	bash dictunzip */*.dz
