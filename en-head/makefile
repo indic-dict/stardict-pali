@@ -6,7 +6,7 @@ ifndef dicts
 	dicts="*"
 endif
 
-.PHONY: all tars decompile
+.PHONY: all tars decompile dunzip
 
 all:stardict tars
 
@@ -17,5 +17,8 @@ stardict:
 tars:
 	bash ../bin/make_tarballs.sh https://github.com/vvasuki/stardict-sanskrit/raw/master/en-head
 	
+dunzip:
+	bash dictunzip */*.dz
+
 decompile:
 	bash ./decompile_all.sh
