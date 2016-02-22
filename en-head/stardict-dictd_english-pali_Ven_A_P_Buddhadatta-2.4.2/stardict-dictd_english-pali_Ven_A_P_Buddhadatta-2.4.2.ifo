@@ -2,8 +2,5 @@ StarDict's dict ifo file
 version=2.4.2
 wordcount=28370
 idxfilesize=496788
-bookname=English-Pāli (Ven. A.P Buddhadatta)
-author=Venerable A.P Buddhadatta Mahathera
-description=convert to StarDict by KhoaBT btkhoa@yahoo.com
-date=2010.05.07
+bookname=stardict-dictd_english-pali_Ven_A_P_Buddhadatta-2.4.2
 sametypesequence=m
