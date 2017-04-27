@@ -1,6 +1,7 @@
 StarDict's dict ifo file
 version=2.4.2
 wordcount=49000
-idxfilesize=887239
+synwordcount=19637
+idxfilesize=1113375
 bookname=pali-en-pa
 sametypesequence=m
