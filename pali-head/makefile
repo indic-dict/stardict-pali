@@ -17,7 +17,7 @@ add_dev:
 	bash $(STARDICT_SANSKRIT_BIN)/babylon_add_devanAgarI.sh 
 
 tars:
-	bash $(STARDICT_SANSKRIT_BIN)/make_tarballs.sh https://github.com/sanskrit-coders/stardict-pali/raw/master/pali-head
+	bash $(STARDICT_SANSKRIT_BIN)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/master/pali-head
 	
 decompile:
 	bash ./decompile_all.sh
