@@ -1,6 +1,6 @@
 STARDICT_TOOLS_DIR=~/stardict/tools/src/
 TABFILE=$(STARDICT_TOOLS_DIR)/tabfile
-STARDICT_SANSKRIT_BIN=~/stardict-sanskrit/bin
+DICT_TOOLS_BIN_BASH=~/dict-tools/bin/bash
 
 ifndef dicts
 	dicts="*"
@@ -11,10 +11,10 @@ endif
 all:stardict tars
 
 stardict:
-	bash $(STARDICT_SANSKRIT_BIN)/tsv_to_stardict.sh 
+	bash $(DICT_TOOLS_BIN_BASH)/tsv_to_stardict.sh 
 
 tars:
-	bash $(STARDICT_SANSKRIT_BIN)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/master/en-head
+	bash $(DICT_TOOLS_BIN_BASH)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/master/en-head
 	
 decompile:
 	bash ./decompile_all.sh
