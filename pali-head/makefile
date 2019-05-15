@@ -11,13 +11,13 @@ endif
 all:add_dev stardict tars
 
 stardict:
-	bash $(DICT_TOOLS_BIN_BASH)/tsv_to_stardict.sh 
+	bash $(DICT_TOOLS_BIN_BASH)/tsv_to_stardict.sh $(DICTS)
 
 add_dev:
-	bash $(DICT_TOOLS_BIN_BASH)/babylon_add_devanAgarI.sh 
+	bash $(DICT_TOOLS_BIN_BASH)/babylon_add_devanAgarI.sh $(DICTS)
 
 tars:
 	bash $(DICT_TOOLS_BIN_BASH)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/master/pali-head
-	
+
 decompile:
 	bash ./decompile_all.sh
