@@ -1,5 +1,4 @@
 STARDICT_TOOLS_DIR=~/stardict/tools/src/
-TABFILE=$(STARDICT_TOOLS_DIR)/tabfile
 DICT_TOOLS_BIN_BASH=~/dict-tools/bin/bash
 
 
