@@ -18,10 +18,10 @@ add_dev:
 	bash $(DICT_TOOLS_BIN_BASH)/babylon_add_optitrans.sh DICTS=$(DICTS)
 
 tars:
-	bash $(DICT_TOOLS_BIN_BASH)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-en-head DICTS=$(DICTS)
+	bash $(DICT_TOOLS_BIN_BASH)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-en-head/tars/tars DICTS=$(DICTS)
 
 full:
-	bash $(DICT_TOOLS_BIN_BASH)/full_build.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-en-head DICTS=$(DICTS)
+	bash $(DICT_TOOLS_BIN_BASH)/full_build.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-en-head/tars DICTS=$(DICTS)
 
 
 decompile:
