@@ -1,27 +1,20 @@
-STARDICT_TOOLS_DIR=~/stardict/tools/src/
-TABFILE=$(STARDICT_TOOLS_DIR)/tabfile
-DICT_TOOLS_BIN_BASH=~/dict-tools/bin/bash
+SUBDIRS := $(wildcard */.)  # e.g. "foo/. bar/."
+TARGETS := full all tars tarlist  # whatever else, but must not contain '/'
 
-ifndef dicts
-	dicts="*"
-endif
+# foo/.all bar/.all foo/.clean bar/.clean
+SUBDIRS_TARGETS := $(foreach t,$(TARGETS),$(addsuffix $t,$(SUBDIRS)))
 
-.PHONY: all tars decompile dunzip
+.PHONY : $(TARGETS) $(SUBDIRS_TARGETS)
 
-all:add_dev stardict tars
+# static pattern rule, expands into:
+# all clean : % : foo/.% bar/.%
+$(TARGETS) : % : $(addsuffix %,$(SUBDIRS))
+	@echo 'Done "$*" target'
 
-stardict:
-	bash $(DICT_TOOLS_BIN_BASH)/tsv_to_stardict.sh DICTS=$(DICTS)
+# here, for foo/.all:
+#   $(@D) is foo
+#   $(@F) is .all, with leading period
+#   $(@F:.%=%) is just all
+$(SUBDIRS_TARGETS) :
+	$(MAKE) -C $(@D) $(@F:.%=%)
 
-add_dev:
-	bash $(DICT_TOOLS_BIN_BASH)/babylon_add_optitrans.sh DICTS=$(DICTS)
-
-tars:
-	bash $(DICT_TOOLS_BIN_BASH)/make_tarballs.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/tars DICTS=$(DICTS)
-
-full:
-	bash $(DICT_TOOLS_BIN_BASH)/full_build.sh https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/tars DICTS=$(DICTS)
-
-
-decompile:
-	bash ./decompile_all.sh
