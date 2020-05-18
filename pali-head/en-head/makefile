@@ -5,7 +5,7 @@ DICT_TOOLS_BIN_BASH=~/dict-tools/bin/bash
 DICTS=.*
 
 # Let the URL not end with /.
-URL=https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/tars
+URL=https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/$(shell pwd|sed -e s/.*[/]//)/tars
 
 .PHONY: all stardict tars
 
