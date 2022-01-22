@@ -1,1 +1,1 @@
-https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/other-entries/tars/roots__2021-09-12_01-59-17Z__0MB.tar.gz  
+https://github.com/indic-dict/stardict-pali/raw/gh-pages/pali-head/other-entries/tars/roots__2022-01-22_15-17-04Z__0MB.tar.gz  
